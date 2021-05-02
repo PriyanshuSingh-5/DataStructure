@@ -33,6 +33,20 @@ namespace MSTestDataStructure
             bool flagReturned = list.InsertAfter(data, previousNode);
             Assert.AreEqual(flag, flagReturned);
         }
+
+        [TestMethod]
+        [DataRow(40, true)]
+        [DataRow(45, false)]
+        public void DeleteAny_PassAValueToBeDeleted_ReturnTrueOrFalse(int data, bool flag)
+        {
+            LinkedList list = new LinkedList();
+            list.InsertFront(56);
+            list.InsertFront(30);
+            list.InsertFront(40);
+            list.InsertFront(70);
+            bool flagReturned = list.DeleteAny(data);
+            Assert.AreEqual(flag, flagReturned);
+        }
     }
 }
 

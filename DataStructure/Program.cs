@@ -29,7 +29,9 @@ namespace DataStructure
 
             // list.DeleteLastNode();
 
-            list.Search(30);
+            //list.Search(30);
+            Console.WriteLine("Deleting 40");
+            list.DeleteAny(40);
             list.Display();
             Console.ReadLine();
 
