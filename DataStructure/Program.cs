@@ -8,7 +8,7 @@ namespace DataStructure
 {
     class Program
     {
-        static void Main(string[] args)
+       public  static void Main(string[] args)
         {
             Console.WriteLine("Welcome to data structure");
             LinkedList list = new LinkedList();
@@ -27,7 +27,9 @@ namespace DataStructure
 
             //list.DeleteFirstNode();
 
-            list.DeleteLastNode();
+            // list.DeleteLastNode();
+
+            list.Search(30);
             list.Display();
             Console.ReadLine();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructure
 {
-    class LinkedList
+    public class LinkedList
     {
         public Node head;
         public void InsertLast(int new_data)
@@ -101,6 +101,30 @@ namespace DataStructure
             }
             newNode.next = null;
             return newNode;
+        }
+
+        public bool Search(int input)
+        {
+            bool flag = false;
+            if (head == null)
+                Console.WriteLine("List is Empty");
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == input)
+                    {
+                        Console.WriteLine("The element is present");
+                        flag = true;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (!flag)
+                    Console.WriteLine("The Element is Absent");
+            }
+            return flag;
         }
         internal void Display()
         {
