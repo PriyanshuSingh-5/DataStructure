@@ -12,9 +12,12 @@ namespace DataStructure
         {
             Console.WriteLine("Welcome to data structure");
             LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
+            list.InsertLast(56);
+            list.InsertLast(30);
+            list.InsertLast(70);
+            list.Display();
+            Console.ReadLine();
+
         }
     }
 }

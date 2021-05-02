@@ -9,21 +9,48 @@ namespace DataStructure
     class LinkedList
     {
         public Node head;
-        public void Add(int data)
+        public void InsertLast(int new_data)
         {
-            Node node = new Node(data);
+            Node new_node = new Node(new_data);
             if (this.head == null)
-                this.head = node;
+            {
+                this.head = new_node;
+            }
             else
             {
-                Node temp = head;
+                Node lastNode = GetLastNode();
+                lastNode.next = new_node;
+            }
+            Console.WriteLine("inserted into list" + new_node.data);
+
+        }
+        public Node GetLastNode()
+        {
+            Node temp = this.head;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            return temp;
+        }
+
+        internal void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return;
+            }
+            else
+            {
                 while (temp.next != null)
                 {
+                    Console.Write(temp.data + "->");
                     temp = temp.next;
                 }
-                temp.next = node;
+                Console.WriteLine(temp.data);
             }
-            Console.WriteLine("{0} inserted into the linked list", node.data);
         }
     }
 }
