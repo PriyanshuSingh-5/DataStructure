@@ -16,12 +16,15 @@ namespace DataStructure
             //list.InsertLast(30);
             //list.InsertLast(70);
 
+            //list.InsertFront(70);
+            //list.InsertFront(30);
+            //list.InsertFront(56);
+
+
             list.InsertFront(70);
-            list.InsertFront(30);
             list.InsertFront(56);
 
-
-           
+            list.InsertAtParticularPosition(2, 30);
             list.Display();
             Console.ReadLine();
 
