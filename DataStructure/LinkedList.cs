@@ -9,7 +9,7 @@ namespace DataStructure
     public class LinkedList
     {
         public Node head;
-        public void InsertLast(int new_data)
+        public void InsertLast(int new_data) //insetion of data at end
         {
             Node new_node = new Node(new_data);
             if (this.head == null)
@@ -24,7 +24,7 @@ namespace DataStructure
             Console.WriteLine("inserted into list" + new_node.data);
 
         }
-        public Node GetLastNode()
+        public Node GetLastNode() //to get the node
         {
             Node temp = this.head;
             while (temp.next != null)
@@ -33,7 +33,7 @@ namespace DataStructure
             }
             return temp;
         }
-        public void InsertFront(int new_data)
+        public void InsertFront(int new_data)   //Insert data at front
         {
             Node new_node = new Node(new_data);
             new_node.next = this.head;
@@ -43,7 +43,7 @@ namespace DataStructure
 
 
        
-        //internal Node InsertAtParticularPosition(int position, int data)
+        //public Node InsertAtParticularPosition(int position, int data)  //add data in between
         //{
         //    if (position < 1)
         //        Console.WriteLine("Invalid position");
@@ -73,7 +73,7 @@ namespace DataStructure
         //}
 
 
-        internal Node DeleteFirstNode()
+        public Node DeleteFirstNode()   //delete first node
         {
             if(this.head==null)
             {
@@ -83,7 +83,7 @@ namespace DataStructure
             return this.head;
         }
 
-        public Node DeleteLastNode()
+        public Node DeleteLastNode()    //delete last node
         {
             Node newNode = this.head;
             if(this.head == null)
@@ -127,7 +127,7 @@ namespace DataStructure
             return flag;
         }
 
-        public bool InsertAfter(int data, int after)
+        public bool InsertAfter(int data, int after)    //insert in between the sequences
         {
             bool flag = false;
             if (head == null)
@@ -153,7 +153,7 @@ namespace DataStructure
             return flag;
         }
 
-        public bool DeleteAny(int data)
+        public bool DeleteAny(int data)     //delete data
         {
             bool flag = false;
             int count = 0;
@@ -190,7 +190,7 @@ namespace DataStructure
             return flag;
         }
 
-        public int Size()
+        public int Size()   //specify size
         {
             int count = 0;
 
@@ -207,7 +207,7 @@ namespace DataStructure
     
 
 
-         internal void Display()
+        public void Display()  //display data after changes made
         {
             Node temp = this.head;
             if (temp == null)

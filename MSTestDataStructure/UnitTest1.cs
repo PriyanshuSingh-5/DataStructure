@@ -11,7 +11,7 @@ namespace MSTestDataStructure
 
         [DataRow(30, true)]
         [DataRow(45, false)]
-        public void Search_PassANodeValue_ReturnTrueOrFalse(int data, bool flag)
+        public void Search_PassANodeValue_ReturnTrueOrFalse(int data, bool flag) //search a node
         {
             LinkedList list = new LinkedList();
             list.InsertFront(56);
@@ -24,7 +24,7 @@ namespace MSTestDataStructure
         [TestMethod]
         [DataRow(40, 30, true)]
         [DataRow(45, 55, false)]
-        public void InsertAfter_ReturnTrueOrFalse(int data, int previousNode, bool flag)
+        public void InsertAfter_ReturnTrueOrFalse(int data, int previousNode, bool flag) //insert in between
         {
             LinkedList list = new LinkedList();
             list.InsertFront(56);
@@ -37,7 +37,7 @@ namespace MSTestDataStructure
         [TestMethod]
         [DataRow(40, true)]
         [DataRow(45, false)]
-        public void DeleteAny_PassAValueToBeDeleted_ReturnTrueOrFalse(int data, bool flag)
+        public void DeleteAny_PassAValueToBeDeleted_ReturnTrueOrFalse(int data, bool flag) //delete any value
         {
             LinkedList list = new LinkedList();
             list.InsertFront(56);
