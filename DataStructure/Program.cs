@@ -39,7 +39,7 @@ namespace DataStructure
 
             stack.Pop();
 
-            stack.Display();
+            stack.Peek();
             Console.ReadLine();
 
         }
