@@ -12,13 +12,13 @@ namespace DataStructure
         {
             Console.WriteLine("Welcome to data structure");
             LinkedList list = new LinkedList();
-            //list.InsertLast(56);
-            //list.InsertLast(30);
-            //list.InsertLast(70);
+            list.InsertLast(56);
+            list.InsertLast(30);
+            list.InsertLast(70);
 
-            list.InsertFront(70);
-            list.InsertFront(30);
-            list.InsertFront(56);
+            //list.InsertFront(70);
+            //list.InsertFront(30);
+            //list.InsertFront(56);
 
 
             //list.InsertFront(70);
@@ -30,16 +30,37 @@ namespace DataStructure
             // list.DeleteLastNode();
 
             //list.Search(30);
+
+
             //Console.WriteLine("Deleting 40");
             //list.DeleteAny(40);
-            Stack stack = new Stack();
+
+            //Stack stack = new Stack();
             //stack.Push(70);
             //stack.Push(30);
             //stack.Push(56);
 
-            stack.Pop();
+            //stack.Pop();
 
-            stack.Peek();
+            // stack.Peek();
+
+            // list.Search(30);
+            //list.Display();
+            //list.InsertAfter(40, 30);
+
+
+            Queue queue = new Queue();
+            
+            queue.Enqueue(44);
+            queue.Enqueue(33);
+            queue.Enqueue(23);
+            queue.DisplayQueue();
+            
+            //queue.QueuePeek();
+            
+            //queue.Dequeue();
+            
+            //queue.IsEmptyQueue();
             Console.ReadLine();
 
         }
